@@ -14,6 +14,7 @@ This code is based on DETR: [[link]](https://github.com/facebookresearch/detr).
 
 ## DataSets
 
+```
 ${MAtrack_ROOT}
  -- data
      -- Lasot
@@ -34,3 +35,8 @@ ${MAtrack_ROOT}
          ...
          |-- TRAIN_11
          |-- TEST
+```
+
+## Trained model
++ Download pre-trained weights into ```./checpoints/train```  
+[[weights]]()
