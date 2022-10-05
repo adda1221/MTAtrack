@@ -40,3 +40,13 @@ ${MAtrack_ROOT}
 ## Trained model
 + Download pre-trained weights into ```./checpoints```  
 [[weights]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
+
+##Code
++ TrackingNet validation set
+python tracking/test.py MAtrack_st --dataset trackingnet --threads 16
+python lib/test/utils/transform_trackingnet.py --tracker_name MAtrack_st
+
+
+
+
+
