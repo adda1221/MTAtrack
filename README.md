@@ -42,6 +42,12 @@ ${MAtrack_ROOT}
 [[weights]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
 
 ## Code
+
++ paths setting
+```
+python tracking/create_default_local_file.py --workspace_dir . --data_dir ./data --save_dir .
+```
+
 + TrackingNet validation set
 ```
 python tracking/test.py MAtrack_st --dataset trackingnet --threads 16
@@ -59,4 +65,14 @@ python tracking/analysis_results.py
 python tracking/test.py MAtrack_st --dataset got10k --threads 16
 python lib/test/utils/transform_trackingnet.py --tracker_name MAtrack_st
 ```
+
+## Raw results
++ TrackingNet results  
+[[trackingnet]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
+
++ Lasot results  
+[[Lasot]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
+
++ GOT-10k results  
+[[GOT-10k]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
 
