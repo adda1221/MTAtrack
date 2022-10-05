@@ -38,5 +38,5 @@ ${MAtrack_ROOT}
 ```
 
 ## Trained model
-+ Download pre-trained weights into ```./checpoints/train```  
++ Download pre-trained weights into ```./checpoints```  
 [[weights]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
