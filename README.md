@@ -41,12 +41,22 @@ ${MAtrack_ROOT}
 + Download pre-trained weights into ```./checpoints```  
 [[weights]](https://drive.google.com/file/d/1N0BgKRKuxJyGReBgcwmFuK77ka1k226Z/view?usp=sharing)
 
-##Code
+## Code
 + TrackingNet validation set
+```
 python tracking/test.py MAtrack_st --dataset trackingnet --threads 16
 python lib/test/utils/transform_trackingnet.py --tracker_name MAtrack_st
+```
 
++ Lasot validation set
+```
+python tracking/test.py MAtrack_st --dataset lasot --threads 16
+python tracking/analysis_results.py
+```
 
-
-
++ GOT-10k validation set
+```
+python tracking/test.py MAtrack_st --dataset got10k --threads 16
+python lib/test/utils/transform_trackingnet.py --tracker_name MAtrack_st
+```
 
