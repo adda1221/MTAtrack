@@ -1,6 +1,6 @@
-# MAtrack
+# MTAtrack
 
-This is the implementation of MAtrack.    
+This is the implementation of MTAtrack.    
 This code is based on DETR: [[link]](https://github.com/facebookresearch/detr).
 
 
@@ -15,7 +15,7 @@ This code is based on DETR: [[link]](https://github.com/facebookresearch/detr).
 ## DataSets
 
 ```
-${MAtrack_ROOT}
+${MTAtrack_ROOT}
  -- data
      -- Lasot
          |-- airplane
@@ -50,20 +50,20 @@ python tracking/create_default_local_file.py --workspace_dir . --data_dir ./data
 
 + TrackingNet validation set
 ```
-python tracking/test.py MAtrack_st --dataset trackingnet --threads 16
-python lib/test/utils/transform_trackingnet.py --tracker_name MAtrack_st
+python tracking/test.py MTAtrack_st --dataset trackingnet --threads 16
+python lib/test/utils/transform_trackingnet.py --tracker_name MTAtrack_st
 ```
 
 + Lasot validation set
 ```
-python tracking/test.py MAtrack_st --dataset lasot --threads 16
+python tracking/test.py MTAtrack_st --dataset lasot --threads 16
 python tracking/analysis_results.py
 ```
 
 + GOT-10k validation set
 ```
-python tracking/test.py MAtrack_st --dataset got10k --threads 16
-python lib/test/utils/transform_trackingnet.py --tracker_name MAtrack_st
+python tracking/test.py MTAtrack_st --dataset got10k --threads 16
+python lib/test/utils/transform_trackingnet.py --tracker_name MTAtrack_st
 ```
 
 ## Raw results
