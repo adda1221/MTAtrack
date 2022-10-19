@@ -9,7 +9,7 @@ from torchvision.models._utils import IntermediateLayerGetter
 from typing import Dict, List
 from lib.utils.misc import NestedTensor, is_main_process
 from .position_encoding import build_position_encoding
-from lib.models.MAtrack import resnet as resnet_module
+from lib.models.MTAtrack import resnet as resnet_module
 
 
 class FrozenBatchNorm2d(torch.nn.Module):

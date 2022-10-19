@@ -5,15 +5,15 @@ from lib.train.data.processing_utils import sample_target
 import cv2
 import os
 from lib.utils.merge import merge_template_search
-from lib.models.MAtrack import build_MAtracks
-from lib.test.tracker.MAtrack_utils import Preprocessor
+from lib.models.MTAtrack import build_MTAtracks
+from lib.test.tracker.MTAtrack_utils import Preprocessor
 from lib.utils.box_ops import clip_box
 
 
-class MAtrack_S(BaseTracker):
+class MTAtrack_S(BaseTracker):
     def __init__(self, params, dataset_name):
-        super(MAtrack_S, self).__init__(params)
-        network = build_MAtracks(params.cfg)
+        super(MTAtrack_S, self).__init__(params)
+        network = build_MTAtracks(params.cfg)
         network.load_state_dict(torch.load(self.params.checkpoint, map_location='cpu')['net'], strict=True)
         self.cfg = params.cfg
         self.network = network.cuda()
@@ -100,4 +100,4 @@ class MAtrack_S(BaseTracker):
 
 
 def get_tracker_class():
-    return MAtrack_S
+    return MTAtrack_S

@@ -6,15 +6,15 @@ from copy import deepcopy
 import cv2
 import os
 from lib.utils.merge import merge_template_search
-from lib.models.MAtrack import build_MAtrackst
-from lib.test.tracker.MAtrack_utils import Preprocessor
+from lib.models.MTAtrack import build_MTAtrackst
+from lib.test.tracker.MTAtrack_utils import Preprocessor
 from lib.utils.box_ops import clip_box
 
 
-class MAtrack_ST(BaseTracker):
+class MTAtrack_ST(BaseTracker):
     def __init__(self, params, dataset_name):
-        super(MAtrack_ST, self).__init__(params)
-        network = build_MAtrackst(params.cfg)
+        super(MTAtrack_ST, self).__init__(params)
+        network = build_MTAtrackst(params.cfg)
         network.load_state_dict(torch.load(self.params.checkpoint, map_location='cpu')['net'], strict=True)  #加载模型
         self.cfg = params.cfg
         self.network = network.cuda()
@@ -133,4 +133,4 @@ class MAtrack_ST(BaseTracker):
 
 
 def get_tracker_class():
-    return MAtrack_ST
+    return MTAtrack_ST

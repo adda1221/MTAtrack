@@ -2,7 +2,7 @@ from easydict import EasyDict as edict
 import yaml
 
 """
-Add default config for MAtrack Stage2.
+Add default config for MTAtrack Stage2.
 """
 cfg = edict()
 

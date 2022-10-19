@@ -1,5 +1,5 @@
 """
-MAtrack Transformer class.
+MTAtrack Transformer class.
 
 Copy-paste from torch.nn.Transformer with modifications:
     * positional encodings are passed in MHattention

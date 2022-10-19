@@ -1,13 +1,13 @@
 """
-MAtrack-ST Model (Spatio-Temporal).
+MTAtrack-ST Model (Spatio-Temporal).
 """
 from .backbone import build_backbone
 from .transformer import build_transformer
 from .head import build_box_head, MLP
-from lib.models.MAtrack.MAtrack_s import MAtrackS
+from lib.models.MTAtrack.MTAtrack_s import MTAtrackS
 
 
-class MAtrackST(MAtrackS):
+class MTAtrackST(MTAtrackS):
     """ This is the base class for Transformer Tracking """
     def __init__(self, backbone, transformer, box_head, num_queries,
                  aux_loss=False, head_type="CORNER", cls_head=None):
@@ -58,12 +58,12 @@ class MAtrackST(MAtrackS):
             return out_dict, None
 
 
-def build_MAtrackst(cfg):
+def build_MTAtrackst(cfg):
     backbone = build_backbone(cfg)  # backbone and positional encoding are built together
     transformer = build_transformer(cfg)
     box_head = build_box_head(cfg)
     cls_head = MLP(cfg.MODEL.HIDDEN_DIM, cfg.MODEL.HIDDEN_DIM, 1, cfg.MODEL.NLAYER_HEAD)   #加了一个多层感知器来预测检测的准确率？？
-    model = MAtrackST(
+    model = MTAtrackST(
         backbone,
         transformer,
         box_head,

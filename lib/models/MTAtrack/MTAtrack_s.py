@@ -1,5 +1,5 @@
 """
-Basic MAtrack Model (Spatial-only).
+Basic MTAtrack Model (Spatial-only).
 """
 import torch
 from torch import nn
@@ -12,7 +12,7 @@ from .head import build_box_head
 from lib.utils.box_ops import box_xyxy_to_cxcywh
 
 
-class MAtrackS(nn.Module):
+class MTAtrackS(nn.Module):
     """ This is the base class for Transformer Tracking """
     def __init__(self, backbone, transformer, box_head, num_queries,
                  aux_loss=False, head_type="CORNER"):
@@ -130,11 +130,11 @@ class MAtrackS(nn.Module):
                 for b in outputs_coord[:-1]]
 
 
-def build_MAtracks(cfg):
+def build_MTAtracks(cfg):
     backbone = build_backbone(cfg)  # backbone and positional encoding are built together
     transformer = build_transformer(cfg)
     box_head = build_box_head(cfg)
-    model = MAtrackS(
+    model = MTAtrackS(
         backbone,
         transformer,
         box_head,

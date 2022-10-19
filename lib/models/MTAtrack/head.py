@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch
 import torch.nn.functional as F
-from lib.models.MAtrack.backbone import FrozenBatchNorm2d
+from lib.models.MTAtrack.backbone import FrozenBatchNorm2d
 
 
 def conv(in_planes, out_planes, kernel_size=3, stride=1, padding=1, dilation=1,
