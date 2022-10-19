@@ -2,7 +2,7 @@ from easydict import EasyDict as edict
 import yaml
 
 """
-Add default config for MAtrack Stage1.
+Add default config for MTAtrack Stage1.
 """
 cfg = edict()   #easydict的作用：可以使得以属性的方式去访问字典的值！
 
