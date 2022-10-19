@@ -134,7 +134,7 @@ def build_MTAtracks(cfg):
     backbone = build_backbone(cfg)  # backbone and positional encoding are built together
     transformer = build_transformer(cfg)
     box_head = build_box_head(cfg)
-    model = MAtrackS(
+    model = MTAtrackS(
         backbone,
         transformer,
         box_head,
