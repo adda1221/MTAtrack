@@ -3,6 +3,9 @@
 This is the implementation of MTAtrack.    
 This code is based on DETR: [[link]](https://github.com/facebookresearch/detr).
 
+## Tracking demo
+https://user-images.githubusercontent.com/114666579/212537480-d0932e1f-70c7-43e7-a4a5-1612ca539b52.mp4
+
 
 ## Dependencies
 + PyTorch 1.7.0
