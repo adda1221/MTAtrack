@@ -60,13 +60,25 @@ python lib/test/utils/transform_trackingnet.py --tracker_name MTAtrack_st
 + Lasot validation set
 ```
 python tracking/test.py MTAtrack_st --dataset lasot --threads 16
-python tracking/analysis_results.py
+python tracking/analysis_results.py  # need to modify tracker configs and names
 ```
 
 + GOT-10k validation set
 ```
 python tracking/test.py MTAtrack_st --dataset got10k --threads 16
 python lib/test/utils/transform_trackingnet.py --tracker_name MTAtrack_st
+```
+
++ UAV123 validation set
+```
+python tracking/test.py MTAtrack_st baseline --dataset uav --threads 16
+python tracking/analysis_results.py  # need to modify tracker configs and names
+```
+
++ OTB100 validation set
+```
+python tracking/test.py MTAtrack_st baseline --dataset otb --threads 16
+python tracking/analysis_results.py  # need to modify tracker configs and names
 ```
 
 ## Raw results
